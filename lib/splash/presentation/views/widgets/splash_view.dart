@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:mikhail_samuel/utils/app_images.dart';
-import 'package:mikhail_samuel/utils/app_text_styles.dart';
+import 'package:mikhail_samuel/core/utils/app_colors.dart';
+import 'package:mikhail_samuel/core/utils/app_images.dart';
+import 'package:mikhail_samuel/core/utils/app_text_styles.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key, required this.title});
   final String title;
-
+  
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -18,7 +19,12 @@ class SplashView extends StatelessWidget {
             height: 150, // ارتفاع الصورة
             fit: BoxFit.contain, // تناسب الصورة داخل الأبعاد المحددة
           ),
-          Text(title, style: TextStyles.bold40),
+          Text(
+            title,
+            style: TextStyles.bold40.copyWith(
+              color: AppColors.primaryColorWithe,
+            ),
+          ),
         ],
       ),
     );

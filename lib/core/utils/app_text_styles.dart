@@ -5,4 +5,8 @@ abstract class TextStyles {
     fontWeight: FontWeight.bold,
     fontSize: 40,
   );
+  static const TextStyle bold28 = TextStyle(
+    fontWeight: FontWeight.normal,
+    fontSize: 28,
+  );
 }
