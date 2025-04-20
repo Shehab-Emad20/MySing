@@ -10,8 +10,8 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: buildAppBar(context, title: 'Welcome My Sign',),
-      body: BodyPage(),
+      appBar: buildAppBar(context, title: 'مرحبا بك ', showBackButton: false),
+      body: const BodyPage(),
     );
   }
 }

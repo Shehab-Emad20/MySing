@@ -1,0 +1,17 @@
+import 'package:flutter/material.dart';
+import 'package:mikhail_samuel/core/helper_function/build_appbar.dart';
+import 'package:mikhail_samuel/dictionary/view/widgets/dictionary_home.dart';
+
+class DictionaryviewHome extends StatelessWidget {
+  const DictionaryviewHome({super.key});
+  static const String routeName = 'DictionaryView';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+     
+      appBar: buildAppBar(context, showBackButton: true),
+      body: const DictionaryHome(),
+    );
+  }
+}

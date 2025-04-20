@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mikhail_samuel/core/helper_function/custom_button.dart';
+import 'package:mikhail_samuel/core/widgets/custom_button.dart';
 import 'package:mikhail_samuel/core/utils/app_images.dart';
 
 class BodyPage extends StatelessWidget {
@@ -14,13 +14,17 @@ class BodyPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           CustomButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, "translateView");
+            },
             text: "Translate",
             imageAsset: Assets.imagesTranslate,
           ),
           const SizedBox(height: 20),
           CustomButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, "DictionaryView");
+            },
             text: "Dictionary",
             imageAsset: Assets.imagesdictionary,
           ),
