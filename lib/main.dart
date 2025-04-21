@@ -1,10 +1,15 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:mikhail_samuel/core/helper_function/on_generate_routes.dart';
 import 'package:mikhail_samuel/splash/presentation/views/home_page.dart';
-import 'generated/l10n.dart'; // تأكد من أن هذا الملف موجود بعد التوليد
+import 'generated/l10n.dart';
 
-void main() {
+List<CameraDescription> cameras = [];
+
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  cameras = await availableCameras();
   runApp(const MySine());
 }
 
@@ -21,7 +26,7 @@ class MySine extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: S.delegate.supportedLocales,
-      locale: const Locale('ar'), // اللغة الافتراضية
+      locale: const Locale('ar'),
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoutes,
       initialRoute: HomePage.routeName,

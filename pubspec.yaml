@@ -21,6 +21,9 @@ dependencies:
   # تأكد إذا دي فعلاً مكتبة داخلية أو تم إضافتها بالخطأ
   flutter_application_1: ^0.0.2
   intl_utils: ^2.8.10
+  camera: ^0.11.1
+  tflite: ^1.1.2
+
 
 dev_dependencies:
   flutter_test:
@@ -34,6 +37,8 @@ flutter:
 
   assets:
     - assets/images/
+    - assets/labels.txt
+    - assets/model.tflite
 
 flutter_icons:
   android: true
