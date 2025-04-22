@@ -1,7 +1,6 @@
-build.gradleallprojects {
-    
+allprojects {
+    extra.set("kotlin_version", "1.8.10")
     repositories {
-
         google()
         mavenCentral()
     }
@@ -10,10 +9,11 @@ build.gradleallprojects {
 val newBuildDir: Directory = rootProject.layout.buildDirectory.dir("../../build").get()
 rootProject.layout.buildDirectory.value(newBuildDir)
 
-subprojects {build.gradle
+subprojects {
     val newSubprojectBuildDir: Directory = newBuildDir.dir(project.name)
     project.layout.buildDirectory.value(newSubprojectBuildDir)
 }
+
 subprojects {
     project.evaluationDependsOn(":app")
 }
